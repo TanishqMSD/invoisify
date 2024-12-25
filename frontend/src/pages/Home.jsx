@@ -69,7 +69,7 @@ const Home = () => {
         </button>
 
         
-        <Link to="features" smooth={true} duration={500}>
+        <Link to="/features" smooth={true} duration={500}>
           <div className="mt-8">
             <FaArrowDown className="text-3xl text-gray-900 animate-bounce" />
           </div>
@@ -134,6 +134,7 @@ const Home = () => {
           Join thousands of professionals using Invoisify to streamline their
           invoicing process.
         </p>
+        <Link to="/signup" >
         <button
           className="px-8 py-3 bg-gray-800 rounded hover:bg-gray-700 text-white text-xl"
           data-aos="zoom-in"
@@ -141,6 +142,8 @@ const Home = () => {
         >
           Sign Up for Free
         </button>
+        </Link>
+        
       </section>
 
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form, Card } from 'react-bootstrap';
 import { GoogleLogin } from '@react-oauth/google';
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Login = () => {
@@ -12,7 +13,9 @@ const Login = () => {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+    
+    <GoogleOAuthProvider clientId="765503244124-dab77ompbo1jjpiq6cr93dahq45fun83.apps.googleusercontent.com">
+    <div className="d-flex justify-content-center align-items-center min-vh-100 py-10 bg-light">
       <Card style={{ width: '400px' }} className="p-4 shadow-lg">
         <h3 className="text-center mb-4">Login</h3>
         
@@ -50,6 +53,8 @@ const Login = () => {
         </div>
       </Card>
     </div>
+    </GoogleOAuthProvider> 
+   
   );
 };
 
