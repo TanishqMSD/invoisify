@@ -8,6 +8,7 @@ import NotFound from "../pages/NotFound.jsx";
 import Home from "../pages/Home.jsx";
 import Signup from "../pages/Signup.jsx";
 import Login from "../pages/Login.jsx";
+import Invoices from "../pages/Invoices.jsx"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
       </Route>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Signup />} />
+      <Route path="/invoices" element={<Invoices/>} />
       <Route path="*" element={<NotFound />} />
     </>
   )

@@ -6,6 +6,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
+    <div className="bg-gray-900">
     <div className=" text-white ml-4 mr-4">
       
       <div className="flex items-center justify-between px-4 py-2">
@@ -41,20 +42,27 @@ const Navbar = () => {
             isMenuOpen ? "block" : "hidden"
           } absolute lg:static top-full left-0 w-full lg:w-auto bg-gray-800 lg:bg-transparent z-10 lg:flex-row flex-col text-center`}
         >
-          <li className="py-2 lg:py-0">
-            <span className="cursor-pointer hover:text-gray-400">Home</span>
-          </li>
-          <li className="py-2 lg:py-0">
-            <span className="cursor-pointer hover:text-gray-400">Invoices</span>
-          </li>
-          <li className="py-2 lg:py-0">
-            <span className="cursor-pointer hover:text-gray-400">Help</span>
-          </li>
+          <Link to="/home">
+            <li className="py-2 lg:py-0">
+              <span className="cursor-pointer hover:text-gray-400">Home</span>
+            </li>
+          </Link>
+          <Link to="/invoices">
+            <li className="py-2 lg:py-0">
+              <span className="cursor-pointer hover:text-gray-400">Invoices</span>
+            </li>
+          </Link>
+          <Link to="/help">
+            <li className="py-2 lg:py-0">
+              <span className="cursor-pointer hover:text-gray-400">Help</span>
+            </li>
+          </Link>
          <Link to="/login"> <li className="py-2 lg:py-0">
             <span className="cursor-pointer hover:text-gray-400">Login</span>
           </li></Link>
         </ul>
       </div>
+    </div>
     </div>
   );
 };

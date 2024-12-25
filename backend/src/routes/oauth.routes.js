@@ -6,10 +6,11 @@ const router = Router();
 
 router.route('/google/callback').get(passport.authenticate("google", {
     failureRedirect: "/api/v1/oauth/login/failure",
-    successRedirect: "/api/v1/oauth/login/success"
 }), callback);
 
+router.route('/google-screen').get(passport.authenticate('google', {scope: ["profile", "email"]}));
+
 router.route('/login/failure').get(loginFailure);
-router.route('/login/success').get(loginSuccess);
+router.route('/login/success').get(loginSuccess); 
 
 export default router;
