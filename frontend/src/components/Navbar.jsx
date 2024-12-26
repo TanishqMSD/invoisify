@@ -6,9 +6,10 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
+    <div className="bg-gray-900">
     <div className=" text-white ml-4 mr-4">
       
-      <div className="flex items-center justify-between px-4 py-3">
+      <div className="flex items-center justify-between px-4 py-2">
       
         <div className="flex items-center gap-2">
           <img src={logo} alt="Logo" className="h-10 w-auto" />
@@ -37,7 +38,7 @@ const Navbar = () => {
         </button>
 
         <ul
-          className={`lg:flex gap-10 font-inknut ${
+          className={`lg:flex gap-10 text-center font-inknut ${
             isMenuOpen ? "block" : "hidden"
           } absolute lg:static top-full left-0 w-full lg:w-auto bg-gray-800 lg:bg-transparent z-10 lg:flex-row flex-col text-center`}
         >
@@ -58,6 +59,7 @@ const Navbar = () => {
           
         </ul>
       </div>
+    </div>
     </div>
   );
 };

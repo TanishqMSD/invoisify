@@ -85,6 +85,10 @@ const googleLogin = asyncHandler(async (req, res) => {
     );
 });
 
+const profile = asyncHandler(async (req, res) => {
+    return res.send(`Welcome ${req.user.displayName}`);
+});
+
 export {
     googleLogin,
 }
